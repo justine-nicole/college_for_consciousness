@@ -272,7 +272,7 @@ class _ClickableImageMapState extends State<ClickableImageMap> {
     //*****************************************
     return Scaffold(
       appBar: AppBar(
-        title: Text('School of Consciousness'),
+        title: Text('College For Consciousness'),
         backgroundColor: Colors.teal,
       ),
       body: Container(
