@@ -1,3 +1,5 @@
-class AppImages {
-  static const String firstImage = 'assets/images/firstExample.jpg';
-}
+// add images once available
+
+// class AppImages {
+//   static const String firstImage = 'assets/images/firstExample.jpg';
+// }
