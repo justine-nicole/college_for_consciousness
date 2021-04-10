@@ -1,7 +1,13 @@
+// import 'dart:html';
 import 'dart:math' as math;
+import 'package:college_for_consciousness/app/app_colors.dart';
+import 'package:college_for_consciousness/app/app_strings.dart';
 import 'package:flutter/material.dart';
 
+
 import 'package:flutter/gestures.dart';
+
+
 
 class Home extends StatefulWidget {
   Home({
@@ -95,7 +101,7 @@ class _HomeState extends State<Home> {
       height: double.infinity,
       width: _windowWidth,
       alignment: Alignment.center,
-      color: Color(0xFFF9F9F9),
+      color: AppColors.palePeachPage,
 
       /// Page Area Full Width
       child: Center(
@@ -133,8 +139,10 @@ class _HomeState extends State<Home> {
 
 
             child:     Scaffold(
+              //this is the appbar that's getting picked up/////////////////////
               appBar: AppBar(
-                title: Text('School of Consciousness'),
+                title: Text('College for Consciousness'),
+                backgroundColor: AppColors.clearNavy,
               ),
               body: SingleChildScrollView(
                 physics: NeverScrollableScrollPhysics(),
@@ -146,23 +154,24 @@ class _HomeState extends State<Home> {
                     children: [
                       Expanded(
                         flex: 1,
+                        // LEFT COLUMN ZONE ////////////////////////////////////
                         child: Container(
-                          height: 300,
-                          color: Colors.green,
+                          height: 955,
+                          color: AppColors.palePeachPage,
                         ),
                       ),
                       Expanded(
                         flex: 2,
                         child:
-
                         Column(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
+                            // HERO SECTION ////////////////////////////////////
                             Container(
-                              height: 100,
-                              color: Colors.yellow,
+                              height: 250,
+                              color: AppColors.brightLime,
                             ),
                             Flexible(
                               child: LayoutBuilder(
@@ -180,16 +189,18 @@ class _HomeState extends State<Home> {
                             ),
                             Flexible(
                               flex: 1,
+                              // SECTION B BELOW MAP /////////////////////////////////////
                               child: Container(
-                                height: 300,
-                                color: Colors.purple,
+                                height: 200,
+                                color: AppColors.truePeach,
                               ),
                             ),
                             Flexible(
                               flex: 1,
+                              // SECTION C BELOW MAP ///////////////////////////////////////
                               child: Container(
-                                height: 300,
-                                color: Colors.pink,
+                                height: 200,
+                                color: AppColors.duskyBlue,
                               ),
                             ),
                           ],
@@ -197,9 +208,10 @@ class _HomeState extends State<Home> {
                       ),
                       Expanded(
                         flex: 1,
+                        //RIGHT COLUMN ZONE ////////////////////////////////////
                         child: Container(
-                          height: 300,
-                          color: Colors.red,
+                          height: 955,
+                          color: AppColors.palePeachPage,
                         ),
                       ),
                     ],
@@ -236,7 +248,8 @@ class MyApp extends StatelessWidget {
       //*****************************************
       // This is the title that will appear inside the browser tab
       //*****************************************
-      title: 'Clickable Image Map',
+      title: AppStrings.appBarTitle,
+
       home: Material(child: Home()),
     );
   }
@@ -273,7 +286,7 @@ class _ClickableImageMapState extends State<ClickableImageMap> {
     return Scaffold(
       appBar: AppBar(
         title: Text('College For Consciousness'),
-        backgroundColor: Colors.teal,
+        backgroundColor: AppColors.clearNavy,
       ),
       body: Container(
         alignment: Alignment.topCenter,
@@ -281,9 +294,9 @@ class _ClickableImageMapState extends State<ClickableImageMap> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              flex: 1,
+              flex: 2,
               child: Container(
-                height: 300,
+                height: 500,
                 color: Colors.green,
               ),
             ),
@@ -293,9 +306,10 @@ class _ClickableImageMapState extends State<ClickableImageMap> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  // AREA BEHIND CLICKABLE MAP /////////////////////////////////
                   Container(
                     height: 100,
-                    color: Colors.yellow,
+                    color: AppColors.palePeachPage,
                   ),
                   LayoutBuilder(
                     builder: (BuildContext ctx, BoxConstraints constraints) {
@@ -311,13 +325,15 @@ class _ClickableImageMapState extends State<ClickableImageMap> {
                   ),
                   Expanded(
                     flex: 1,
+                    // where is this???  //////////////////////////////////////////////
                     child: Container(
                       height: 300,
                       color: Colors.purple,
+                      ),
                     ),
-                  ),
                   Expanded(
                     flex: 1,
+                    // where is this??? /////////////////////////////////////////////
                     child: Container(
                       height: 300,
                       color: Colors.pink,
@@ -328,6 +344,7 @@ class _ClickableImageMapState extends State<ClickableImageMap> {
             ),
             Expanded(
               flex: 1,
+              // where is this? /////////////////////////////////////////////////////
               child: Container(
                 height: 300,
                 color: Colors.red,
@@ -340,6 +357,7 @@ class _ClickableImageMapState extends State<ClickableImageMap> {
   }
 }
 
+// CLICKABLE MAP AREA /////////////////////////////////////////////////////////////////////////////
 class ClickableMap extends StatelessWidget {
   const ClickableMap({
     Key key,
@@ -362,10 +380,10 @@ class ClickableMap extends StatelessWidget {
         height: _sizeReferenceNumber,
         width: _sizeReferenceNumber,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.palePeachPage,
           border: Border.all(
             width: 2,
-            color: Colors.black87,
+            color: AppColors.darkTan,
           ),
         ),
         //*****************************************
@@ -374,7 +392,7 @@ class ClickableMap extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             //*****************************************
-            // Layer one, the lowest white shape
+            // Layer one, the lowest partial oval shape
             //*****************************************
             LayerItem(
                 callback: () => print('Layer 1'),
@@ -382,12 +400,12 @@ class ClickableMap extends StatelessWidget {
                 left: _sizeReferenceNumber * 0.25,
                 height: _sizeReferenceNumber * 0.2,
                 width: _sizeReferenceNumber * 0.3,
-                color: Colors.white,
-                borderColor: Color(0x33000000),
+                color: AppColors.lightPink,
+                borderColor: AppColors.darkTan,
                 borderWidth: 2,
                 borderRadius: _sizeReferenceNumber * 0.1),
             //*****************************************
-            // Layer two, the middle-height white shape
+            // Layer two, the oval shape
             //*****************************************
             LayerItem(
               callback: () => print('Layer 2'),
@@ -395,13 +413,13 @@ class ClickableMap extends StatelessWidget {
               left: _sizeReferenceNumber * 0.15,
               height: _sizeReferenceNumber * 0.2,
               width: _sizeReferenceNumber * 0.3,
-              color: Color(0xFF8E24AA),
-              borderColor: Color(0x33000000),
+              color: AppColors.brightLime,
+              borderColor: AppColors.darkTan,
               borderWidth: 2,
               borderRadius: _sizeReferenceNumber * 0.1,
             ),
             //*****************************************
-            // Layer three, the translucent purple shape
+            // Layer three, the circle shape
             //*****************************************
             LayerItem(
               callback: () => print('Layer 3'),
@@ -409,8 +427,8 @@ class ClickableMap extends StatelessWidget {
               left: _sizeReferenceNumber * 0.4,
               height: _sizeReferenceNumber * 0.5,
               width: _sizeReferenceNumber * 0.5,
-              color: Colors.green,
-              borderColor: Color(0x33000000),
+              color: AppColors.lightOrange,
+              borderColor: AppColors.darkTan,
               borderWidth: 2,
               borderRadius: _sizeReferenceNumber * 0.25,
             ),
