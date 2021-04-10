@@ -12,7 +12,7 @@ class AppColors {
   static const Color peachyWhite = Color(0xFFFFE9BD);
   static const Color truePeach = Color(0xFFF3CF96);
   static const Color lightOrange = Color(0xFFF4BD6C);
-  static const Color duskyBlue = Color(0xFFF4BD6C);
+  static const Color duskyBlue = Color(0xFF527F89);
   static const Color lushGreen = Color(0xFF199467);
   static const Color brightLime = Color(0xFF7AE76A);
   static const Color yellowGreen = Color(0xFFB4FE63);
