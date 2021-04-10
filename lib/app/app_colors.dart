@@ -2,16 +2,28 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // App Specific Colors
-  static const Color backgroundWhite = Color(0xFFFCFBFB);
-  static const Color brownSugar = Color(0xFFB26F42);
-  static const Color darkSienna = Color(0xFF492426);
-  static const Color xanaduBlue = Color(0xFF6D8781);
-static const Color oliveAccent = Color(0xFF9C8F3E);
-  // General Colors
+  static const Color radRed = Color(0xFFC52041);
+  static const Color warmBrown = Color(0xFF845B32);
+  static const Color paleBlue = Color(0xFF52ADE0);
+  static const Color lightPink = Color(0xFFFBA6BD);
+  static const Color darkTan = Color(0xFF716249);
+  static const Color clearNavy = Color(0xFF17455C);
+  static const Color palestYellow = Color(0xFFFFE79A);
+  static const Color peachyWhite = Color(0xFFFFE9BD);
+  static const Color truePeach = Color(0xFFF3CF96);
+  static const Color lightOrange = Color(0xFFF4BD6C);
+  static const Color duskyBlue = Color(0xFFF4BD6C);
+  static const Color lushGreen = Color(0xFF199467);
+  static const Color brightLime = Color(0xFF7AE76A);
+  static const Color yellowGreen = Color(0xFFB4FE63);
+  static const Color deepTeal = Color(0xFF1A3A40);
+    // General Colors
   static const Color whiteTextColor = Color(0xDDFFFFFF);
-  static const Color blackTextColor = Color(0xFF111111);
+  static const Color darkTextColor = Color(0xFF1A3A40);
+  // static const Color blackTextColor = Color(0xFF111111);
   static const Color dropShadowColor = Color(0x33000000);
-  static const Color offWhitePageBackground = Color(0xFFF9F9F9);
+  static const Color palePeachPage = Color (0xFFFFE9BD);
+  // static const Color offWhitePageBackground = Color(0xFFF9F9F9);
 
   static const Color bronze = Color(0xFFD6943A);
   static const Color silver = Color(0xFFD9D9D9);
