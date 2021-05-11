@@ -1,6 +1,6 @@
-# college_for_consciousness
+# InnerQuest
 
-CFC Flutter App
+Flutter App
 
 ## Getting Started
 
