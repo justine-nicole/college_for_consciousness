@@ -21,25 +21,6 @@ class AppTheme {
     );
   }
 
-//  TODO: add dark mode if desired
-// static ThemeData dark() {
-//   final textTheme = _getTextTheme(brightness: Brightness.dark);
-
-//   return ThemeData(
-//     brightness: Brightness.dark,
-//     primaryColor: _primaryColor,
-//     accentColor: _accentColor,
-//     textTheme: textTheme,
-//     primaryTextTheme: textTheme,
-//     dividerTheme: _dividerTheme,
-//     elevatedButtonTheme: _elevatedButtonTheme,
-//   );
-// }
-
-  // static const _primaryColor = Colors.black;
-  // static const _accentColor = Colors.white;
-
-
   // Dividers
   static const _dividerTheme = DividerThemeData(
     indent: 16,
@@ -57,7 +38,7 @@ class AppTheme {
 
 
   // Text
-  static TextTheme _getTextTheme({Brightness brightness}) {
+  static TextTheme _getTextTheme({Brightness? brightness}) {
     final themeData = ThemeData(brightness: brightness);
 
     return GoogleFonts.exo2TextTheme(themeData.textTheme).copyWith(

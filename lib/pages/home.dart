@@ -1,11 +1,13 @@
+import 'dart:math';
 import 'package:college_for_consciousness/app/app_colors.dart';
+import 'package:college_for_consciousness/widgets/clickable_map.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 
 class Home extends StatefulWidget {
   Home({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -86,10 +88,6 @@ class _HomeState extends State<Home> {
     double _screenAspectRatio = _windowWidth / _windowHeight;
     double _contentWidth = _windowWidth > 1200.0 ? 1200.0 : _windowWidth;
 
-    // TODO Get rid of this print
-    print('\nAspectRatio of the window is $_screenAspectRatio\n'
-        '(3:4 is 0.75 and 16:9 is 1.777...)');
-
     return Container(
       /// Background Color and Centering
       height: double.infinity,
@@ -131,7 +129,6 @@ class _HomeState extends State<Home> {
               }
             },
 
-
             child:     Scaffold(
               //this is the appbar that's getting picked up/////////////////////
               appBar: AppBar(
@@ -171,7 +168,7 @@ class _HomeState extends State<Home> {
                               child: LayoutBuilder(
                                 builder: (BuildContext ctx, BoxConstraints constraints) {
                                   double _sizeReference =
-                                  math.min(constraints.maxHeight, constraints.maxWidth);
+                                  min(constraints.maxHeight, constraints.maxWidth);
                                   //        if(_sizeReference > 300) _sizeReference = 300;
                                   return AspectRatio(
                                     aspectRatio: 1,

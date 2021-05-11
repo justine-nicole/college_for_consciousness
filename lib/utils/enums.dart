@@ -1,0 +1,17 @@
+enum AvatarCategory {
+  puppy,
+  kitten,
+  galaxy,
+  atom,
+  flowers,
+  rose,
+  stars,
+  youngWhiteMan,
+  youngBlackMan,
+  youngBrownMan,
+  youngAsianMan,
+  youngWhiteWoman,
+  youngBlackWoman,
+  youngBrownWoman,
+  youngAsianWoman,
+}
