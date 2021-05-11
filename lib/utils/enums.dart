@@ -1,4 +1,4 @@
-enum AvatarCategory {
+enum AvatarType {
   puppy,
   kitten,
   galaxy,
@@ -14,4 +14,10 @@ enum AvatarCategory {
   youngBlackWoman,
   youngBrownWoman,
   youngAsianWoman,
+}
+
+enum Permissions {
+  author,
+  admin,
+  superAdmin,
 }

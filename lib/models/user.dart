@@ -1,9 +1,9 @@
 import 'package:college_for_consciousness/models/article.dart';
-import 'package:college_for_consciousness/models/author.dart';
 import 'package:college_for_consciousness/models/avatar.dart';
 import 'package:college_for_consciousness/models/campus.dart';
 import 'package:college_for_consciousness/models/course.dart';
 import 'package:college_for_consciousness/models/transaction.dart';
+import 'package:college_for_consciousness/utils/enums.dart';
 
 class User {
   User({
@@ -17,11 +17,12 @@ class User {
     this.creditBalance = 0,
     this.articlesRead = const <Article>[],
     this.favoriteArticles  = const <Article>[],
-    this.followedAuthors  = const <Author>[],
+    this.followedAuthors  = const <User>[],
     this.campusesMemberOf  = const <Campus>[],
     this.coursesEnrolledIn  = const <Course>[],
     this.coursesGraduated  = const <Course>[],
     this.transactions  = const <Transaction>[],
+    this.permissions  = const <Permissions>[],
   });
 
   int userId;
@@ -34,11 +35,12 @@ class User {
   double creditBalance;
   List<Article> articlesRead;
   List<Article> favoriteArticles;
-  List<Author> followedAuthors;
+  List<User> followedAuthors;
   List<Campus> campusesMemberOf;
   List<Course> coursesEnrolledIn;
   List<Course> coursesGraduated;
   List<Transaction> transactions;
+  List<Permissions> permissions;
 
   factory User.fromJson(Map<String, dynamic> json) => User(
       userId: json["userId"],
@@ -56,6 +58,7 @@ class User {
       coursesEnrolledIn: json["coursesEnrolledIn"],
       coursesGraduated: json["coursesGraduated"],
       transactions: json["transactions"],
+      permissions: json["permissions"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -74,5 +77,6 @@ class User {
     "coursesEnrolledIn": coursesEnrolledIn,
     "coursesGraduated": coursesGraduated,
     "transactions": transactions,
+    "permissions": permissions,
   };
 }

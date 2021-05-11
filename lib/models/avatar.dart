@@ -12,5 +12,5 @@ class Avatar {
   int avatarId;
   String avatarName;
   String pathToAsset;
-  AvatarCategory category;
+  AvatarType category;
 }

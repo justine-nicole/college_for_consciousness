@@ -1,5 +1,3 @@
-
-
 import 'package:college_for_consciousness/models/user.dart';
 
 Future<User> getMockUser() async {
@@ -7,6 +5,8 @@ Future<User> getMockUser() async {
     userId: 1,
     firstName: 'Jane',
     lastName: 'Doe',
+    countryCode: 'US',
+    city: 'Dallas',
     email: 'noone@nowhere.net',
   );
 }
