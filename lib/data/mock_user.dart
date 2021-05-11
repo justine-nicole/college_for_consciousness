@@ -1,9 +1,9 @@
 
 
-import 'package:college_for_consciousness/models/user_model.dart';
+import 'package:college_for_consciousness/models/user.dart';
 
-Future<UserModel> getMockUser() async {
-  return UserModel(
+Future<User> getMockUser() async {
+  return User(
     userId: 1,
     firstName: 'Jane',
     lastName: 'Doe',

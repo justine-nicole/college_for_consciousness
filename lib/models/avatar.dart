@@ -2,8 +2,8 @@
 
 import 'package:college_for_consciousness/utils/enums.dart';
 
-class AvatarModel{
-  AvatarModel({
+class Avatar {
+  Avatar ({
     required this.avatarId,
     required this.avatarName,
     required this.pathToAsset,
